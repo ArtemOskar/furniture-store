@@ -1,7 +1,7 @@
 <template>
    <footer>
       <div class="container">
-       <h2>Я ФУТЕР!</h2>
+       <h2>Я ФУТЕР!!!</h2>
      </div>
    </footer>
 </template>
