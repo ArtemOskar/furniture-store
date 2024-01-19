@@ -48,7 +48,7 @@
       name: 'MainHeader',
       data() {
          return {
-            openStatusBurgerMenu: false
+            openStatusBurgerMenu: false,
          }
       },
       methods: {
@@ -58,9 +58,9 @@
          }
       },
       computed: {
-         windowWidth() {
-            return window.innerWidth
-         },
+         // windowWidth() {
+         //    return window.innerWidth
+         // },
          isActivBurgerMenu() {
             return this.openStatusBurgerMenu === false ? 'close-menu' : 'open-menu'
          },
