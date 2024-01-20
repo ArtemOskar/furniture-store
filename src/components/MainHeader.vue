@@ -1,30 +1,30 @@
 <template>
   <header>
     <div class="container">
-      <div @click="closeBurgerMenu" class="logo">
+      <div ref="logo" @click="closeBurgerMenu" class="logo">
         <router-link to="/"><img src="@/assets/img/logo.svg" /></router-link>
       </div>
 
-      <nav class="navigation">
-        <router-link @click="closeBurgerMenu" to="/delivery">Доставка</router-link>
-        <router-link @click="closeBurgerMenu" to="/articles">Статьи</router-link>
-        <router-link @click="closeBurgerMenu" to="/about">О нас</router-link>
-        <router-link @click="closeBurgerMenu" to="/contacts">Контакты</router-link>
+      <nav ref="navigation" class="navigation">
+        <router-link @click="closeBurgerMenu" to="/delivery">{{ $t('menu.delivery') }}</router-link>
+        <router-link @click="closeBurgerMenu" to="/articles">{{ $t('menu.articles') }}</router-link>
+        <router-link @click="closeBurgerMenu" to="/about">{{ $t('menu.about') }}</router-link>
+        <router-link @click="closeBurgerMenu" to="/contacts">{{ $t('menu.contacts') }}</router-link>
       </nav>
 
-      <div class="contacts">
+      <div ref="contacts" class="contacts">
         <a href="email:support@wwwwwww.com" class="link-email">support@wwwwwww.com</a>
         <a href="tel:88001111111" class="link-tel">8 (800) 111-11-11</a>
       </div>
 
-      <button class="btn-catalog">Каталог</button>
+      <button class="btn-catalog">{{ $t('buttons.catalog') }}</button>
 
       <template v-if="windowInnerWidth <= 1024">
         <div class="mobile-actions-btn">
           <a href="tel:88001111111" class="ic-phone"><img src="@/assets/img/icons/phone.svg" /></a>
           <span @click="toggleBurgerMenu" class="btn-burger" :class="isActivBurgerMenu"></span>
         </div>
-        <div class="burger-menu" :class="isActivBurgerMenu"></div>
+        <div ref="burgerMenu" class="burger-menu" :class="isActivBurgerMenu"></div>
       </template>
     </div>
   </header>
@@ -49,19 +49,15 @@ export default {
     },
     handleResize() {
       this.windowInnerWidth = window.innerWidth
-      this.showMenuItems()
+      this.transferMenuItems()
     },
-    showMenuItems() {
-      const burgerMenu = document.querySelector('.burger-menu')
-      const navigation = document.querySelector('.navigation')
-      const contacts = document.querySelector('.contacts')
-      const logo = document.querySelector('.logo')
-      if (burgerMenu && navigation && contacts && this.windowInnerWidth < 1024) {
-        burgerMenu.appendChild(navigation)
-        burgerMenu.appendChild(contacts)
-      } else if (navigation && contacts && this.windowInnerWidth >= 1024) {
-        logo.after(contacts)
-        logo.after(navigation)
+    transferMenuItems() {
+      if (this.$refs.burgerMenu && this.$refs.navigation && this.$refs.contacts && this.windowInnerWidth < 1024) {
+        this.$refs.burgerMenu.appendChild(this.$refs.navigation)
+        this.$refs.burgerMenu.appendChild(this.$refs.contacts)
+      } else if (this.$refs.navigation && this.$refs.contacts && this.windowInnerWidth >= 1024) {
+        this.$refs.logo.after(this.$refs.contacts)
+        this.$refs.logo.after(this.$refs.navigation)
       }
     },
   },
@@ -72,7 +68,7 @@ export default {
   },
   mounted() {
     window.addEventListener('resize', this.handleResize)
-    this.showMenuItems()
+    this.transferMenuItems()
   },
   beforeUnmount() {
     window.removeEventListener('resize', this.handleResize)

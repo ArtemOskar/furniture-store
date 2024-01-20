@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "delivery": "Delivery",
+    "articles": "Articles",
+    "about": "About",
+    "contacts": "Contacts"
+  },
+  "buttons": {
+    "catalog": "Catalog"
+  }
+}

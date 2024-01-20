@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "delivery": "Доставка",
+    "articles": "Статті",
+    "about": "Про нас",
+    "contacts": "Контакти"
+  },
+  "buttons": {
+    "catalog": "Каталог"
+  }
+}

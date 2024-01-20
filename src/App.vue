@@ -1,13 +1,17 @@
 <template>
-  <general-layout/>
+  <general-layout />
 </template>
 
 <script>
-import GeneralLayout from "@/components/GeneralLayout.vue";
+import GeneralLayout from '@/components/GeneralLayout.vue'
 
 export default {
   components: {
     GeneralLayout,
+  },
+  mounted() {
+    const userLanguage = navigator.language || navigator.userLanguage
+    this.$i18n.locale = userLanguage.toLowerCase().slice(0, 2)
   },
 }
 </script>

@@ -8,11 +8,8 @@
 
 <script>
 export default {
-  name: "HomePage",
-
-};
+  name: 'HomePage',
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
