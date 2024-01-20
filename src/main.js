@@ -1,7 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import store from "./store";
-import ResizeMixin from './mixins/ResizeMixin'
+import store from './store'
 
-createApp(App).use(store).use(router).mixin(ResizeMixin).mount('#app')
+createApp(App).use(store).use(router).mount('#app')
