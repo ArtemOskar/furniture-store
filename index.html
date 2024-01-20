@@ -1,16 +1,12 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="stylesheet" href="./css/main.css"/><title>App</title><script>(function (l) {
-        if (l.search[1] === "/") {
+<!doctype html><html lang=""><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="stylesheet" href="./css/main.css"/><title>App</title><script>;(function (l) {
+        if (l.search[1] === '/') {
           var decoded = l.search
             .slice(1)
-            .split("&")
+            .split('&')
             .map(function (s) {
-              return s.replace(/~and~/g, "&");
+              return s.replace(/~and~/g, '&')
             })
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
+            .join('?')
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
         }
-      })(window.location);</script><script defer="defer" src="/furniture-store/js/chunk-vendors.9a0c625d.js"></script><script defer="defer" src="/furniture-store/js/app.9c4ffbff.js"></script><link href="/furniture-store/css/app.ba741db4.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but furniture-store doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
+      })(window.location)</script><script defer="defer" src="/furniture-store/js/chunk-vendors.9a0c625d.js"></script><script defer="defer" src="/furniture-store/js/app.a310a0ad.js"></script><link href="/furniture-store/css/app.89595fb6.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but furniture-store doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
