@@ -6,10 +6,10 @@
       </div>
 
       <nav ref="navigation" class="navigation">
-        <router-link @click="closeBurgerMenu" to="/delivery">{{ $t('menu.delivery') }}</router-link>
-        <router-link @click="closeBurgerMenu" to="/articles">{{ $t('menu.articles') }}</router-link>
-        <router-link @click="closeBurgerMenu" to="/about">{{ $t('menu.about') }}</router-link>
-        <router-link @click="closeBurgerMenu" to="/contacts">{{ $t('menu.contacts') }}</router-link>
+        <router-link @click="closeBurgerMenu" to="/delivery">{{ $t('mainMenu.delivery') }}</router-link>
+        <router-link @click="closeBurgerMenu" to="/articles">{{ $t('mainMenu.articles') }}</router-link>
+        <router-link @click="closeBurgerMenu" to="/about">{{ $t('mainMenu.about') }}</router-link>
+        <router-link @click="closeBurgerMenu" to="/contacts">{{ $t('mainMenu.contacts') }}</router-link>
       </nav>
 
       <div ref="contacts" class="contacts">
@@ -77,28 +77,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../public/scss/_functions.scss';
 header {
   background-color: #3b3937;
-  padding: 30px 0;
+  padding: rem(30) 0;
   @media (max-width: 1024px) {
-    padding: 15px 0;
+    padding: rem(15) 0;
   }
 }
 .navigation {
   display: flex;
   align-items: center;
-  column-gap: 36px;
+  column-gap: rem(36);
 
   @media (max-width: 1200px) {
-    column-gap: 1.5em;
+    column-gap: rem(24);
   }
 
   @media (max-width: 1023.98px) {
     flex-direction: column;
     column-gap: 0;
-    row-gap: 35px;
-    padding-top: 100px;
-    margin-bottom: 50px;
+    row-gap: rem(35);
+    padding-top: rem(100);
+    margin-bottom: rem(50);
   }
 
   a {
@@ -124,21 +125,21 @@ header {
 .contacts {
   display: flex;
   align-items: center;
-  column-gap: 4.12em;
+  column-gap: rem(67);
   @media (max-width: 1200px) {
-    column-gap: 1.5em;
+    column-gap: 1.5rem;
   }
   @media (max-width: 1023.98px) {
     flex-direction: column-reverse;
     column-gap: 0;
-    row-gap: 1em;
+    row-gap: rem(16);
   }
   & .link-email {
     font-size: 1rem;
     max-width: fit-content;
   }
   & .link-tel {
-    font-family: 'PermianSlabSerifTypeface';
+    font-family: PermianSerifTypeface;
     font-size: 1.25rem;
     font-weight: 700;
     @media (max-width: 1023.98px) {
@@ -163,8 +164,8 @@ header {
 }
 .logo {
   position: relative;
-  width: 106px;
-  height: 60px;
+  width: rem(106);
+  height: rem(60);
   z-index: 50;
   a,
   img {
@@ -173,13 +174,13 @@ header {
     height: 100%;
   }
   @media (max-width: 1023.98px) {
-    width: 64px;
-    height: 36px;
+    width: rem(64);
+    height: rem(36);
   }
 }
 .ic-phone {
-  width: 18px;
-  height: 18px;
+  width: rem(18);
+  height: rem(18);
 }
 .btn-catalog {
   position: relative;
@@ -188,12 +189,12 @@ header {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   font-size: 0.81rem;
   font-weight: 700;
-  padding: 12px 31px;
+  padding: rem(12) rem(31);
   border: 1px solid #a9845c;
   background-color: #a9845c;
   z-index: 50;
   @media (max-width: 1023.98px) {
-    padding: 6px 21px;
+    padding: rem(6) rem(21);
   }
   @media (any-hover: hover) {
     &:hover {
@@ -211,26 +212,26 @@ header {
   &::before {
     content: '';
     position: absolute;
-    width: 34px;
-    height: 3px;
-    top: -5px;
-    right: 11px;
+    width: rem(34);
+    height: rem(3);
+    top: rem(-5);
+    right: rem(11);
     background: url('~@/assets/img/vector-btn/01.svg') no-repeat;
   }
   &::after {
     content: '';
     position: absolute;
-    width: 65px;
-    height: 2px;
-    bottom: -5px;
-    left: 17px;
+    width: rem(65);
+    height: rem(2);
+    bottom: rem(-5);
+    left: rem(17);
     background: url('~@/assets/img/vector-btn/02.svg') no-repeat;
   }
 }
 .mobile-actions-btn {
   display: flex;
   align-items: center;
-  column-gap: 26px;
+  column-gap: rem(26);
   z-index: 50;
   @media (min-width: 1024px) {
     display: none;
@@ -239,15 +240,15 @@ header {
 .btn-burger {
   position: relative;
   display: block;
-  width: 24px;
-  height: 10px;
+  width: rem(24);
+  height: rem(10);
 
   &::after,
   &::before {
     content: '';
     position: absolute;
-    width: 24px;
-    height: 2px;
+    width: rem(24);
+    height: rem(2);
     background-color: #ffffff;
   }
   &::after {

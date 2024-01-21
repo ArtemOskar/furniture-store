@@ -1,0 +1,10 @@
+@function rem($value) {
+  // Логика для конвертации значения в единицы rem
+  @return ($value / 16) + rem;
+}
+
+// Пример использования
+// .element {
+//   width: rem(16); // Это может быть эквивалентно width: 1rem;
+//   padding: rem(16) rem(16) rem(16) rem(16); // Это может быть эквивалентно padding: 1rem 1rem 1rem 1rem;
+// }

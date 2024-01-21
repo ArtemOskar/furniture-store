@@ -12,11 +12,13 @@ export default {
   mounted() {
     const userLanguage = navigator.language || navigator.userLanguage
     this.$i18n.locale = userLanguage.toLowerCase().slice(0, 2)
+    // this.$i18n.locale = 'en'
   },
 }
 </script>
 
 <style lang="scss">
+@import '../public/scss/main.scss';
 #app {
   // font-family: Avenir, Helvetica, Arial, sans-serif;
   // -webkit-font-smoothing: antialiased;

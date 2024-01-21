@@ -1,0 +1,16 @@
+@import '_functions';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Gilroy;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: rem(1320);
+  padding: 0 rem(20);
+  margin: 0 auto;
+}

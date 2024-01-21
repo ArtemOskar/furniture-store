@@ -1,5 +1,5 @@
 {
-  "menu": {
+  "mainMenu": {
     "delivery": "Доставка",
     "articles": "Статьи",
     "about": "О нас",
@@ -7,5 +7,14 @@
   },
   "buttons": {
     "catalog": "Каталог"
+  },
+  "footer": {
+    "label": "Фабрика G&G. 2024",
+    "privatePolicy": "© Все права защищены",
+    "links": {},
+    "contacts": {
+      "metro": "м. Полежаевская",
+      "location": "123154, г. Москва,<br> пр-т. Маршала Жукова, д. 52"
+    }
   }
 }
