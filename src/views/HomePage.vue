@@ -3,10 +3,10 @@
     <div class="img-container"><img src="@/assets/img/home-main-scrin.png" alt="" /></div>
     <div class="sct-text">
       <img src="@/assets/img/home-main-decor.png" alt="" />
-      <h1>{{$t('homePage.mainScrin.title')}}</h1>
-      <h2>{{$t('homePage.mainScrin.subtitle')}}</h2>
-      <p>{{$t('homePage.mainScrin.text')}}</p>
-      <button>{{$t('homePage.mainScrin.mainScrinButton')}}</button>
+      <h1>{{ $t('homePage.mainScrin.title') }}</h1>
+      <h2>{{ $t('homePage.mainScrin.subtitle') }}</h2>
+      <p>{{ $t('homePage.mainScrin.text') }}</p>
+      <button>{{ $t('homePage.mainScrin.mainScrinButton') }}</button>
     </div>
   </section>
   <div class="container">
@@ -122,7 +122,7 @@ export default {
       padding: rem(12) rem(31);
       border: 1px solid #a9845c;
       background-color: #a9845c;
-    
+
       @media (any-hover: hover) {
         &:hover {
           cursor: pointer;

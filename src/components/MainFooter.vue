@@ -59,7 +59,7 @@ footer {
   background: url('~@/assets/img/bg-footer.png') 100% / cover no-repeat;
 
   @media (max-width: 600px) {
-    padding: super-clamp(40, 80, 320, 600) 0;
+    padding: super-clamp(40, 80, 320, 600);
   }
 }
 .logo {
@@ -246,10 +246,12 @@ footer {
 
   & .privacy-policy {
     margin-top: rem(35);
+    min-width: rem(196);
 
     @media (max-width: 600px) {
       margin-top: rem(0);
       margin-bottom: rem(80);
+      min-width: rem(0);
     }
   }
 }
