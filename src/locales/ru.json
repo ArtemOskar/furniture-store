@@ -23,5 +23,13 @@
       "furnitureFacades": "Мебельные фасады",
       "privacyPolicy": "Политика конфиденциальности"
     }
+  },
+  "homePage": {
+    "mainScrin": {
+      "mainScrinButton": "Подробнее",
+      "title": "Classic Wood Stile",
+      "subtitle": "enterior-exterior",
+      "text": "Приглашает к сотрудничеству архитекторов, дизайнеров и строителей"
+    }
   }
 }

@@ -7,5 +7,29 @@
   },
   "buttons": {
     "catalog": "Catalog"
+  },
+  "footer": {
+    "label": "Factory G&G. 2024",
+    "privatePolicy": "© All rights reserved",
+    "contacts": {
+      "metro": "m. Universitet",
+      "location": "02000, city Kyiv,<br> b-r. Tarasa Shevchenko, 00, h. 00"
+    },
+    "links": {
+      "doors": "Interior doors",
+      "furniture": "Furniture",
+      "wallPanels": "Wall panels 'Boiserie'",
+      "stairs": "Stairs",
+      "furnitureFacades": "Furniture facades",
+      "privacyPolicy": "Privacy Policy"
+    }
+  },
+  "homePage": {
+    "mainScrin": {
+      "mainScrinButton": "More",
+      "title": "Classic Wood Stile",
+      "subtitle": "enterior-exterior",
+      "text": "Invites architects, designers and builders to cooperate"
+    }
   }
 }

@@ -12,6 +12,7 @@ export default {
   mounted() {
     const userLanguage = navigator.language || navigator.userLanguage
     this.$i18n.locale = userLanguage.toLowerCase().slice(0, 2)
+    // this.$i18n.locale = 'ua'
     // this.$i18n.locale = 'en'
   },
 }

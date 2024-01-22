@@ -7,5 +7,29 @@
   },
   "buttons": {
     "catalog": "Каталог"
+  },
+  "footer": {
+    "label": "Фабрика G&G. 2024",
+    "privatePolicy": "© Всі права захищені",
+    "contacts": {
+      "metro": "м. Університет",
+      "location": "02000, м. Київ,<br> б-р. Тараса Шевченка, б. 00"
+    },
+    "links": {
+      "doors": "Міжкімнатні двері",
+      "furniture": "Меблі",
+      "wallPanels": "Стінові панелі «Буазері»",
+      "stairs": "Сходи",
+      "furnitureFacades": "Меблеві фасади",
+      "privacyPolicy": "Політика конфіденційності"
+    }
+  },
+  "homePage": {
+    "mainScrin": {
+      "mainScrinButton": "Детальніше",
+      "title": "Classic Wood Stile",
+      "subtitle": "enterior-exterior",
+      "text": "Запрошує до співпраці архітекторів, дизайнерів та будівельників"
+    }
   }
 }
