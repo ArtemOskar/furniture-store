@@ -9,14 +9,19 @@
       <button>{{ $t('homePage.mainScrin.mainScrinButton') }}</button>
     </div>
   </section>
-  <div class="container">
-    <main></main>
-  </div>
+  <main>
+    <advertising-block/>
+  </main>
 </template>
 
 <script>
+import AdvertisingBlock from '@/components/AdvertisingBlock';
+
 export default {
   name: 'HomePage',
+  components: {
+    AdvertisingBlock,
+  },
 }
 </script>
 

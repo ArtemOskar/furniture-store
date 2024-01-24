@@ -152,7 +152,7 @@ header {
     @media (any-hover: hover) {
       &:hover {
         cursor: pointer;
-        color: #926341;
+        color: #ffffff;
       }
     }
   }

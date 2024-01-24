@@ -31,5 +31,17 @@
       "subtitle": "enterior-exterior",
       "text": "Invites architects, designers and builders to cooperate"
     }
+  },
+  "advertisingBlock": {
+    "card01": {
+      "title": "Doors to order",
+      "description": "At our own factory, we create beautiful, safe and almost eternal doors, interior partitions, wall panels and other solutions for your interior.",
+      "textLink": "order a unique door"
+    },
+    "card02": {
+      "title": "3D milling",
+      "description": "The products created by a computer-controlled milling machine are distinguished by the highest quality, absolute detail and perfect accuracy.",
+      "textLink": "choose from the catalog"
+    }
   }
 }
