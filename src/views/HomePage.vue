@@ -11,16 +11,19 @@
   </section>
   <main>
     <advertising-block/>
+    <product-showcase/>
   </main>
 </template>
 
 <script>
 import AdvertisingBlock from '@/components/AdvertisingBlock';
+import ProductShowcase from '@/components/ProductShowcase';
 
 export default {
   name: 'HomePage',
   components: {
     AdvertisingBlock,
+    ProductShowcase,
   },
 }
 </script>
