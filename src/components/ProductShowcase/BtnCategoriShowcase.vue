@@ -24,7 +24,7 @@ button {
   line-height: 1.2;
   letter-spacing: 0.9px;
   text-transform: uppercase;
-  padding: rem(9) rem(53);
+  padding: rem(9) rem(50);
   background-color: transparent;
   border: 1px solid #dadada;
   opacity: 0.7;
