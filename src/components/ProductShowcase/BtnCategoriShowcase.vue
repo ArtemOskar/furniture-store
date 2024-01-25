@@ -24,10 +24,14 @@ button {
   line-height: 1.2;
   letter-spacing: 0.9px;
   text-transform: uppercase;
-  padding: rem(9) super-clamp(20, 50, 390, 1600);
+  padding: rem(9) rem(53);
   background-color: transparent;
   border: 1px solid #dadada;
   opacity: 0.7;
+
+  @media (max-width: 768px) {
+    padding: rem(9) rem(20);
+  }
 
   @media (any-hover: hover) {
     &:hover {
