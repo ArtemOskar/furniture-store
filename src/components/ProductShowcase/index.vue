@@ -14,15 +14,15 @@
       </div>
 
       <div class="products-body">
-        <product-card :imgCollection="imgCollection" id="pagination-1" />
-        <product-card :imgCollection="imgCollection" id="pagination-2" />
-        <product-card :imgCollection="imgCollection" id="pagination-3" />
-        <product-card :imgCollection="imgCollection" id="pagination-4" />
-        <product-card :imgCollection="imgCollection" id="pagination-5" />
-        <product-card :imgCollection="imgCollection" id="pagination-6" />
-        <product-card :imgCollection="imgCollection" id="pagination-7" />
-        <product-card :imgCollection="imgCollection" id="pagination-8" />
-        <product-card :imgCollection="imgCollection" id="pagination-9" />
+        <product-card :img-collection="imgCollection" id="pagination-1" />
+        <product-card :img-collection="imgCollection" id="pagination-2" />
+        <product-card :img-collection="imgCollection" id="pagination-3" />
+        <product-card :img-collection="imgCollection" id="pagination-4" />
+        <product-card :img-collection="imgCollection" id="pagination-5" />
+        <product-card :img-collection="imgCollection" id="pagination-6" />
+        <product-card :img-collection="imgCollection" id="pagination-7" />
+        <product-card :img-collection="imgCollection" id="pagination-8" />
+        <product-card :img-collection="imgCollection" id="pagination-9" />
       </div>
     </div>
 
