@@ -25,18 +25,22 @@
         <product-card :imgCollection="imgCollection" id="pagination-9" />
       </div>
     </div>
+
+    <btn-schow-all />
   </section>
 </template>
 
 <script>
 import BtnCategoriShowcase from '@/components/ProductShowcase/BtnCategoriShowcase.vue'
 import ProductCard from '@/components/ProductCard.vue'
+import BtnSchowAll from '@/components/ProductShowcase/BtnSchowAll.vue'
 
 export default {
   name: 'ProductShowcase',
   components: {
     BtnCategoriShowcase,
     ProductCard,
+    BtnSchowAll,
   },
   data() {
     return {
@@ -74,5 +78,10 @@ h1 {
   flex-wrap: wrap;
   row-gap: rem(40);
   padding: rem(40) 0;
+
+  @media (max-width: 768px) {
+    padding: rem(20) 0;
+    row-gap: rem(20);
+  }
 }
 </style>
