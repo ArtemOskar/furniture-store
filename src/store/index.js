@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-import doorsModule from './doors'
+import doorsModule from './modules/doors'
 
 export default createStore({
   state: {},

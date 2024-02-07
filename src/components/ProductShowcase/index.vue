@@ -14,15 +14,15 @@
       </div>
 
       <div class="products-body">
-        <product-card :img-collection="imgCollection" id="pagination-1" />
-        <product-card :img-collection="imgCollection" id="pagination-2" />
-        <product-card :img-collection="imgCollection" id="pagination-3" />
-        <product-card :img-collection="imgCollection" id="pagination-4" />
-        <product-card :img-collection="imgCollection" id="pagination-5" />
-        <product-card :img-collection="imgCollection" id="pagination-6" />
-        <product-card :img-collection="imgCollection" id="pagination-7" />
-        <product-card :img-collection="imgCollection" id="pagination-8" />
-        <product-card :img-collection="imgCollection" id="pagination-9" />
+        <product-card
+          v-for="door in getDoorsCollection(this.$i18n.locale)"
+          :key="door.id"
+          :id="door.id"
+          :title="door.title"
+          :price="door.price"
+          :oldPrice="door.oldPrice"
+          :img-collection="door.img"
+        />
       </div>
     </div>
 
@@ -34,6 +34,7 @@
 import BtnCategoriShowcase from '@/components/ProductShowcase/BtnCategoriShowcase.vue'
 import ProductCard from '@/components/ProductCard.vue'
 import BtnSchowAll from '@/components/ProductShowcase/BtnSchowAll.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'ProductShowcase',
@@ -42,14 +43,8 @@ export default {
     ProductCard,
     BtnSchowAll,
   },
-  data() {
-    return {
-      imgCollection: [
-        require('@/assets/img/doors/01/01.png'),
-        require('@/assets/img/doors/01/02.png'),
-        require('@/assets/img/doors/01/03.png'),
-      ],
-    }
+  computed: {
+    ...mapGetters('doors', ['getDoorsCollection']),
   },
 }
 </script>

@@ -1,10 +1,10 @@
 <template>
   <div class="card-body">
-    <h1>VISION Модель 64.43</h1>
+    <h1>{{ title }}</h1>
 
     <div class="prices">
-      <span class="price">24 500 ₽</span>
-      <!-- <span class="old-price">34 500 ₽</span> -->
+      <span class="price" :class="discountedPrice">{{ priceSplit }} {{ currencyUnitPrice }}</span>
+      <span class="old-price" :class="discountedPrice">{{ oldPriceSplit }} {{ currencyUnitOldPrice }}</span>
     </div>
 
     <div>
@@ -40,24 +40,24 @@ export default {
     SwiperSlide,
   },
   props: {
-    // title: {
-    //   type: String,
-    //   required: true,
-    // },
-    // price: {
-    //   type: Number,
-    //   required: true,
-    // },
-    // oldPrice: {
-    //   type: Number,
-    //   required: true,
-    // },
-    imgCollection: {
-      type: Array,
-      required: true,
-    },
     id: {
       type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
+    oldPrice: {
+      type: Number,
+      required: true,
+    },
+    imgCollection: {
+      type: Array,
       required: true,
     },
   },
@@ -68,6 +68,29 @@ export default {
     },
     classFromId() {
       return '.' + this.id
+    },
+    currencyUnitPrice() {
+      return this.$i18n.locale == 'ru' || this.$i18n.locale == 'ua' ? '₴' : '$'
+    },
+    currencyUnitOldPrice() {
+      if (this.oldPrice !== null) {
+        return this.$i18n.locale == 'ru' || this.$i18n.locale == 'ua' ? '₴' : '$'
+      }
+      return ''
+    },
+    discountedPrice() {
+      return this.oldPrice !== null ? 'discounted-price' : null
+    },
+    priceSplit() {
+      let price = this.price.toString()
+      return price.slice(0, -3) + ' ' + price.slice(-3)
+    },
+    oldPriceSplit() {
+      if (this.oldPrice !== null) {
+        let price = this.oldPrice.toString()
+        return price.slice(0, -3) + ' ' + price.slice(-3)
+      }
+      return ''
     },
   },
 }
@@ -98,8 +121,21 @@ h1 {
     letter-spacing: 0.18px;
   }
 
-  &.test {
-    color: red;
+  & .discounted-price {
+    color: #b14101;
+  }
+}
+.old-price {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: rem(8);
+    left: 0;
+    transform: rotate(-10deg);
+    background-color: #b14101;
   }
 }
 .card-body {
@@ -130,11 +166,6 @@ h1 {
 .slider {
   width: rem(240);
   padding: rem(33) rem(0) rem(23) rem(0);
-}
-.test {
-  display: flex;
-  align-items: center;
-  column-gap: rem(8);
 }
 .card-actions {
   display: flex;
